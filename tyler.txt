@@ -3,9 +3,9 @@ Hello eipp i made dumby file for you
     p.s. George's file is bad
     
     _______________________
-   |      '         '      |
-   ------------------------
-              ^
+   |      '         '      |    
+   ------------------------ 
+              ^              
              / \
              
 
@@ -25,3 +25,4 @@ You wanna see a futuristic gun?
 
 Its a futuristic gun!
 
+Tyler and claudio smell
