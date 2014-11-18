@@ -23,8 +23,5 @@ dbogs35 edit
     
 
 
-
 Hi class its tyler.
-
-Can you see this?
 
