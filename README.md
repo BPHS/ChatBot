@@ -11,6 +11,7 @@ This is your first "real world" programming project. Let's see if we can make th
 
 Enjoy becomming a software engineer..
 
-did a pull and testing a push
     Hi Mr. Eipp it's George, I can't wait till we start to 
     build some real cool stuff.
+
+
