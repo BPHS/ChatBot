@@ -15,14 +15,14 @@ Very cool... Can this thing throw snowballs at George?
 
 This thing can't throw any snowballs, it has no arms!
 
-
+WHO'S READY FOR TARC 2015?????
 
 You wanna see a futuristic gun? 
     ____________
-    |   ______ |
-    |   |
-    |__ |
-
+    |   ______ |-------------------------------      0
+    |   |                                            |
+    |__ |                                            ^
+                                                    /  \
 Its a futuristic gun!
 
 Tyler and claudio smell
