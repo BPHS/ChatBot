@@ -17,8 +17,5 @@ Enjoy becomming a software engineer..
     
 
 
-
 Hi class its tyler.
-
-Can you see this?
 
