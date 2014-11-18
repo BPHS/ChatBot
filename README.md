@@ -13,7 +13,8 @@ Enjoy becomming a software engineer..
 
 
     Hi Mr. Eipp it's George, I can't wait till we start to 
-    build some real cool stuff.
+    build some real cool stuff. I think we should build
+    
 
 
 
