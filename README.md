@@ -11,5 +11,3 @@ This is your first "real world" programming project. Let's see if we can make th
 
 Enjoy becomming a software engineer..
 
-
-
