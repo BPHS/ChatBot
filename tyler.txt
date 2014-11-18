@@ -34,10 +34,9 @@ Tyler and claudio smell
 
 DREWBAY
 
-<<<<<<< HEAD
+
         *   *
         
     *           *
         *   *
-=======
->>>>>>> 0e41fe28958f34456698761f64d57fbad25e1fa7
+
