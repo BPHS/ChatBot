@@ -31,6 +31,7 @@ WHO'S READY FOR TARC 2015?????
 
 Who else thinks we should steal some drones from the school?
 
+Im down. It might be a little tricky though
 
 You wanna see a futuristic gun? 
     ____________
@@ -45,3 +46,10 @@ Tyler and claudio smell
 
 DREWBAY
 
+<<<<<<< HEAD
+        *   *
+        
+    *           *
+        *   *
+=======
+>>>>>>> 0e41fe28958f34456698761f64d57fbad25e1fa7
