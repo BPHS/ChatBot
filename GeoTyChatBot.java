@@ -1,3 +1,6 @@
+import java.util.*;
+import java.io.*;
+
 /** 
  * George and tyler created this simple chat bot,
  * in hopes that one day it will grow to be something
@@ -10,23 +13,28 @@
  */
  
  public class GeoTyChatBot{
+     Scanner scanner = new Scanner (System.in);
      
      /**
       * Get greeting of the bot
+      * @return answer ; the response of the user
       */
      
      public String getIntro(){
-         return "Hi there, my name is Trivia Bot. Think you can beat me in a" +
-                "game of trivia?(Yes/No)";
-        answer=scanner.nextLine();
+        System.out.print ("Hi there, my name is Trivia Bot. Think you can beat me in a");
+        System.out.println (" game of trivia?(Yes/No)");
+        String answer=scanner.nextLine();
+        return answer;
      }
-        if(answer.equalsIgnoreCase("yes"){
+}
+    
+    
 
-      public String getResponse(String statement) {
-        String response="";
+      // public String getResponse(String statement) {
+        //String response="";
         
         
-      }
+      //}
 
     
     
@@ -62,7 +70,7 @@
     
     
     
-     private String getRandomResponse () {
+    /* private String getRandomResponse () {
          final int number_of_responses = 10;
          double r = Math.random();
          int whichResponse = (int)(r * number_of_responses);
@@ -74,4 +82,5 @@
          
          return response;
      }
-}
+}*/
+
