@@ -13,13 +13,16 @@ public class GeoTyChatBotTester {
 	public static void main(String[] args) {
 		GeoTyChatBot bot = new GeoTyChatBot();
 		
-		System.out.println (maggie.getGreeting());
-		Scanner in = new Scanner (System.in);
-		String statement = in.nextLine();
+		System.out.println (bot.getGreeting());
+		Scanner scanner = new Scanner (System.in);
+		String statement = scanner.nextLine();
 		
 		while (!statement.equals("Bye")) {
-			System.out.println (maggie.getResponse(statement));
-			statement = in.nextLine();
+			System.out.println (bot.getResponse(statement));
+			statement = scanner.nextLine();
+		}
+		while (statement.equals("Bye")) {
+			System.out.println ("See you later!");
 		}
 	}
 	
