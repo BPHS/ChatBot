@@ -16,9 +16,12 @@
       */
      
      public String getIntro(){
-         return "Hi there! You seem bored, let's talk!";
+         return "Hi there, my name is Trivia Bot. Think you can beat me in a" +
+                "game of trivia?(Yes/No)";
+        answer=scanner.nextLine();
      }
-     
+        if(answer.equalsIgnoreCase("yes"){
+    
      /**
       * Set statements(responses) for various keywords
       * 
@@ -26,8 +29,8 @@
       * @return A response based on the present keywords
       */
       
-      public String getResponse(String statement) {
-        String response="";
+        public String getResponse(String statement) {
+            String response="";
         /*if(statement.indexOf(" no ")>=0){
             response="Aw, don't be so negative!";
         }
@@ -65,6 +68,7 @@
         return response;
     }
     */
+    if(statement.indexOf(" ") >=0)
     
 }
     
