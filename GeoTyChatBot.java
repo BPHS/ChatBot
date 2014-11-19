@@ -1,33 +1,56 @@
+import java.io.*;
+import java.util.*;
+
+
+
 /** 
  * George and tyler created this simple chat bot,
  * in hopes that one day it will grow to be something
  * really big. Or until we start building games.
  * 
- * A simple code that will use a slew of else if statements
- * to set a response of the chatbot. Scanner will
- * be located in the tester. Have fun!
+ * A code that will ask the user trivia questions based on
+ * three different categories (math, history, movies). If
+ * user gets wrong answer, bot will give a second try. If
+ * still wrong after 2nd attempt, the bot will then provide answer.
  * 
  */
  
  public class GeoTyChatBot{
-     
-     /**
+    Scanner scanner=new Scanner(System.in);
+    private String answer;
+    private String response;
+    
+    /**
       * Get greeting of the bot
       */
      
-     public String getIntro(){
-         return "Hi there, my name is Trivia Bot. Think you can beat me in a" +
-                "game of trivia?(Yes/No)";
-        answer=scanner.nextLine();
-     }
-        if(answer.equalsIgnoreCase("yes"){
+    public String getIntro(){
+        System.out.println("Hi there, my name is Trivia Bot. Think you can beat me in a" +
+                "game of trivia?(Yes/No)");
+        String answer=scanner.nextLine();
+        return answer;
+    }
+    
+    boolean runAgain=answer.equalsIgnoreCase("yes");
+    
+    public String getResponse(String statement) {
+        while(runAgain){
+            String response="";
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+    return response;
+    
+    }
+}
 
-      public String getResponse(String statement) {
-        String response="";
-        
-        
-      }
-
     
     
     
@@ -62,7 +85,7 @@
     
     
     
-     private String getRandomResponse () {
+     /*private String getRandomResponse () {
          final int number_of_responses = 10;
          double r = Math.random();
          int whichResponse = (int)(r * number_of_responses);
@@ -74,4 +97,5 @@
          
          return response;
      }
-}
+     */
+
