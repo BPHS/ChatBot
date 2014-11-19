@@ -28,41 +28,23 @@
       
       public String getResponse(String statement) {
         String response="";
-        if(statement.indexOf(" no ")>=0){
-            response="Aw, don't be so negative!";
-        }
-        else if(statement.indexOf(" mother ") >=0
-        ||statement.indexOf(" brother ") >=0
-        ||statement.indexOf(" sister ") >=0
-        ||statement.indexOf(" father ") >=0
-        ||statement.indexOf(" dad ") >=0
-        ||statement.indexOf(" mom ") >=0
-        ||statement.indexOf(" aunt ") >=0
-        ||statement.indexOf(" uncle ") >=0
-        ||statement.indexOf(" cousin ") >=0) {
-            response="Your family seems interesting. Tell me more about them";
-        }
-        else if(statement.indexOf(" dog ") >=0
-        ||statement.indexOf(" cat ") >=0
-        ||statement.indexOf(" hamster ") >=0
-        ||statement.indexOf(" bunny ") >=0
-        ||statement.indexOf(" fish ") >=0
-        ||statement.indexOf(" snake ") >=0){
-            response="Oh, is that your pet?";
-                if(response=="no"){
-                    System.out.println("Do you have any pets?");
-                }
-                else if(response=="yes"){
-                    System.out.println("Tell me about your pets then!");
-                }
-        }
-        else if(statement.indexOf(" pet ") >=0
-        ||statement.indexOf(" pets ") >=0){
-            response="Do you like your pet(s)?";
-        }
-        return response;
+        
+        
       }
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
