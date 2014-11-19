@@ -73,3 +73,32 @@
     }
 }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     private String getRandomResponse () {
+         final int number_of_responses = 10;
+         double r = Math.random();
+         int whichResponse = (int)(r * number_of_responses);
+         String response = "";
+         
+         if (whichResponse == 0) {
+             response = "That cool, tell me more";
+         }
+    

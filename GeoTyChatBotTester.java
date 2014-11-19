@@ -13,7 +13,7 @@ public class GeoTyChatBotTester {
 	public static void main(String[] args) {
 		GeoTyChatBot bot = new GeoTyChatBot();
 		
-		System.out.println (bot.getGreeting());
+		System.out.println (bot.getIntro());
 		Scanner scanner = new Scanner (System.in);
 		String statement = scanner.nextLine();
 		
