@@ -28,7 +28,7 @@
       
       public String getResponse(String statement) {
         String response="";
-        if(statement.indexOf(" no ")>=0){
+        /*if(statement.indexOf(" no ")>=0){
             response="Aw, don't be so negative!";
         }
         else if(statement.indexOf(" mother ") >=0
@@ -60,21 +60,12 @@
         ||statement.indexOf(" pets ") >=0){
             response="Do you like your pet(s)?";
         }
-
+    
       }
-
-
-        
-        
-        
-        
-        
-        
-    
-    
-    
         return response;
     }
+    */
+    
 }
     
     
