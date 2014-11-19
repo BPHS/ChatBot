@@ -60,8 +60,22 @@
         ||statement.indexOf(" pets ") >=0){
             response="Do you like your pet(s)?";
         }
+
       }
 
+
+        
+        
+        
+        
+        
+        
+    
+    
+    
+        return response;
+    }
+}
     
     
     
