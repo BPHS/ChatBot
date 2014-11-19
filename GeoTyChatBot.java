@@ -60,6 +60,10 @@
         ||statement.indexOf(" pets ") >=0){
             response="Do you like your pet(s)?";
         }
+
+      }
+
+
         
         
         
@@ -115,4 +119,5 @@
          if (whichResponse == 0) {
              response = "That cool, tell me more";
          }
-    
+     }
+}
