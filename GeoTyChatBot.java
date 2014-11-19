@@ -48,7 +48,7 @@
         ||statement.indexOf(" bunny ") >=0
         ||statement.indexOf(" fish ") >=0
         ||statement.indexOf(" snake ") >=0){
-            response="Oh, is that your pet?"
+            response="Oh, is that your pet?";
                 if(response=="no"){
                     System.out.println("Do you have any pets?");
                 }
@@ -60,5 +60,16 @@
         ||statement.indexOf(" pets ") >=0){
             response="Do you like your pet(s)?";
         }
- }
+        
+        
+        
+        
+        
+        
+    
+    
+    
+        return response;
+    }
+}
     
