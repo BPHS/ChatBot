@@ -34,7 +34,7 @@ import java.util.*;
     public String getIntro(){
         System.out.println("Hi there, my name is Trivia Bot. Think you can beat me in a" +
                 "game of trivia?(Yes/No)");
-        String answer=scanner.nextLine();
+        answer=scanner.nextLine();
         return answer;
     }
     
@@ -56,18 +56,6 @@ import java.util.*;
     return response;
     
     }
-}
-
-     public String getIntro(){
-        System.out.print ("Hi there, my name is Trivia Bot. Think you can beat me in a");
-        System.out.println (" game of trivia?(Yes/No)");
-        String answer=scanner.nextLine();
-        return answer;
-     }
-}
-    
-    
-
       // public String getResponse(String statement) {
         //String response="";
         
