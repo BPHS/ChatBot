@@ -22,6 +22,9 @@ public class GeoTyChatBotTester {
         	System.out.println ("What type of trivia would you like to do?");
         	System.out.println ("Movie");
             String category=scanner.nextLine();
+            
+            System.out.println(TriviaBot.askTriviaQuestion(category));
+            
 	
 		}
 	}
