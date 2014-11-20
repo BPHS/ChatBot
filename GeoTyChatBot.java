@@ -20,10 +20,8 @@ import java.util.*;
     Scanner scanner=new Scanner(System.in);
     private String answer;
     private String response;
-    
-    /**
-     Scanner scanner = new Scanner (System.in);
-     
+    private String category;
+    private String triviaQuestion;
      /**
 
       * Get greeting of the bot
@@ -38,27 +36,15 @@ import java.util.*;
         return answer;
     }
     
-    
-    public String getResponse(String statement) {
-            String response="";
-            
-            
-            
-            
-            
-            
-            
-            
+    public String askTriviaQuestion(){
+        if(category.equalsIgnoreCase("movies")){
             
     
-        return response;
+        
+        }
+    return triviaQuestion;
     }
 
-      // public String getResponse(String statement) {
-        //String response="";
-        
-        
-      //}
 
 
     
