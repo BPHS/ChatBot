@@ -36,11 +36,23 @@ import java.util.*;
         return answer;
     }
     
-    public String askTriviaQuestion(){
+    public String askTriviaQuestion(String category){
         if(category.equalsIgnoreCase("movies")){
-            
-    
-        
+            class movieTriviaSet {
+                private String getRandomMovieTrivia(){
+                    final int number_of_trivia_questions = 10;
+                    double r = Math.random();
+                    int whichResponse = (int)(r*number_of_trivia_questions);
+                    String response = "";
+         
+                    if (whichResponse == 0) {
+                    response = "That cool, tell me more";
+                }
+         
+                return response;
+            }
+        }
+
         }
     return triviaQuestion;
     }
