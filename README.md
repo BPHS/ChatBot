@@ -1,3 +1,4 @@
+
 ChatBot
 ========
 
@@ -11,12 +12,12 @@ This is your first "real world" programming project. Let's see if we can make th
 
 Enjoy becomming a software engineer..
 
-<<<<<<< HEAD
+
 
 dbogs35 edit
 
 =======
->>>>>>> 51c2bbb82e2ebdbc987aeb2ea79ca95aa7ea517a
+
 
     Hi Mr. Eipp it's George, I can't wait till we start to 
     build some real cool stuff. I think we should build
@@ -24,4 +25,6 @@ dbogs35 edit
 
 
 Hi class its tyler.
+
+=======
 
