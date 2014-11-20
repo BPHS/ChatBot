@@ -38,10 +38,8 @@ import java.util.*;
         return answer;
     }
     
-    boolean runAgain=answer.equalsIgnoreCase("yes");
     
     public String getResponse(String statement) {
-        while(runAgain){
             String response="";
             
             
@@ -52,10 +50,10 @@ import java.util.*;
             
             
             
-        }
-    return response;
     
+        return response;
     }
+
       // public String getResponse(String statement) {
         //String response="";
         
