@@ -3,5 +3,10 @@
  * 
  * **/
 public class Dennis {
-    System.out.println("This is dbogs' file.");
+    
+    public static void main(String[] args) {
+    
+        System.out.println("This is dbogs' file.");
+        System.out.println("Eipp was here!");
+    }
 }
