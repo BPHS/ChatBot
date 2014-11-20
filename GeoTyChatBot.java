@@ -42,14 +42,14 @@ import java.util.*;
                 private String getRandomMovieTrivia(){
                     final int number_of_trivia_questions = 10;
                     double r = Math.random();
-                    int whichResponse = (int)(r*number_of_trivia_questions);
-                    String response = "";
+                    int whichTriviaQuestion = (int)(r*number_of_trivia_questions);
+                    String question = "";
          
-                    if (whichResponse == 0) {
-                    response = "That cool, tell me more";
+                    if (whichTriviaQuestion==0) {
+                    question = "Who was the lead actor in Rocky 4?";
                 }
          
-                return response;
+                return question;
             }
         }
 
@@ -94,23 +94,6 @@ import java.util.*;
     
     
 
-     /*private String getRandomResponse () {
-
-   
-
-         final int number_of_responses = 10;
-         double r = Math.random();
-         int whichResponse = (int)(r * number_of_responses);
-         String response = "";
-         
-         if (whichResponse == 0) {
-             response = "That cool, tell me more";
-         }
-         
-         return response;
-     }
-
-     */
 
 }
 
