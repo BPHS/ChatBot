@@ -20,7 +20,7 @@ public class GeoTyChatBotTester {
 		
 		while (answer.equalsIgnoreCase("yes")){
         	System.out.println ("What type of trivia would you like to do?");
-        	System.out.println ("Movie,History, or Math");
+        	System.out.println ("Movie");
             answer = scanner.nextLine ();
 	
 		}
