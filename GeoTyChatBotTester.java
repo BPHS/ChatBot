@@ -15,7 +15,7 @@ public class GeoTyChatBotTester {
 		GeoTyChatBot TriviaBot = new GeoTyChatBot ();
 		Scanner scanner = new Scanner (System.in);
 		
-		String answer = TriviaBot.getIntro ();
+		String answer=TriviaBot.getIntro();
 		
 		
 		while (answer.equalsIgnoreCase("yes")){
