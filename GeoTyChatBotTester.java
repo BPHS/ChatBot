@@ -1,4 +1,5 @@
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 /**
  * Class to run geo+tyler chatbot
@@ -6,7 +7,6 @@ import java.util.Scanner;
  * 
  */
 public class GeoTyChatBotTester {
-
 	/**
 	 * Create a ChatBot, give it user input, and print its replies.
 	 */
@@ -15,13 +15,13 @@ public class GeoTyChatBotTester {
 		GeoTyChatBot TriviaBot = new GeoTyChatBot ();
 		Scanner scanner = new Scanner (System.in);
 		
-		String answer=TriviaBot.getIntro();
+		String runProgram=TriviaBot.getIntro();
 		
 		
-		while (answer.equalsIgnoreCase("yes")){
+		while (runProgram.equalsIgnoreCase("yes")){
         	System.out.println ("What type of trivia would you like to do?");
         	System.out.println ("Movie");
-            answer = scanner.nextLine ();
+            String category=scanner.nextLine();
 	
 		}
 	}
