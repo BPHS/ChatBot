@@ -64,19 +64,7 @@ import java.util.Random;
     public String askTriviaQuestion(int category){
         String question = "";
         if (category == MOVIES) {
-            
-            //class movieTriviaSet {
-                //private String getRandomMovieTrivia(){
-                    //final int number_of_trivia_questions = 10;
-                    //double r = Math.random();
-                    //int whichTriviaQuestion = (int)(r*number_of_trivia_questions);
-         
-                    //if (whichTriviaQuestion==0) {
                     question = "Who was the lead actor in Rocky 4?";
-                //}
-         
-                // return question;
-            //}
             
         } else if (category == MATH) {
             
