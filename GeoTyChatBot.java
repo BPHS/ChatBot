@@ -96,7 +96,16 @@ import java.util.Random;
 
     // TODO: make this a cool message
     //       this should have many different fun messages that 
-    //       denote the user was correct to make this fun
+    //       denote the user was correct to make this fun.
+    //EDIT: (GEORGE): Mr. Eipp, I think this will work
+    //      to choose a random message to be displayed when the user
+    //      guesses the right answer. The only problem is that I
+    //      don't know where/how to assign the right answer to each
+    //      problem. I'm assuming it will use alot of indexOf's, but
+    //      still really dumbfounded. 
+    //TODO:  Assign the right answer to the questions in order 
+    //      to test the below methods.
+    //      (george)
     public void showMessageCorrect() {
         String correctResponse;
         String[] strCorrect = new String[6]; //declaring array of six items
