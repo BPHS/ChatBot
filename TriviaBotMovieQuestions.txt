@@ -1,10 +1,11 @@
-Who was the main actor in the Rocky series?
-What was the name of the blue fish in Finding Nemo?
-Why did Nemo get taken away in Finding Nemo?
-Who won in the fight between Rocky and Apollo Creed in Rocky 1?
-Who did Rocky have to fight in Rocky IV?
-Which movie has the highest number of Oscars won?
-Why did the Titanic sink?
-Did Jack Dawson die at the end of the Titanic?
-What is the highest grossing film of all time?
-What is the name of Nemo's squid friend?
+0. Who was the main actor in the Rocky series?
+1. What was the name of the blue fish in Finding Nemo?
+2. Why did Nemo get taken away in Finding Nemo?
+3. Who won in the fight between Rocky and Apollo Creed in Rocky 1?
+4. Who did Rocky have to fight in Rocky IV?
+5. Which movie has the highest number of Oscars won?
+6. Why did the Titanic sink?
+7. Did Jack Dawson die at the end of the Titanic?
+8. What is the highest grossing film of all time?
+9. What is the name of Nemo's squid friend?
+10. 
