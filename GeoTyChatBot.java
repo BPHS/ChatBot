@@ -133,8 +133,24 @@ import java.util.Random;
     
     // Didnt edit because we are doing seperate docs for answers and Questions
     public void showMessageInCorrect() {
+        String incorrectResponse;
+        String strIncorrect = new String [6];
         
+        strIncorrect [0] = "Not even close!";
         
+        strIncorrect [1] = "That wasn't actually your answer was it?";
+        
+        strIncorrect [2] = "You should take a break! You seem to be struggling";
+        
+        strIncorrect [3] = "We should start betting! I'd be rich!!!";
+        
+        strIncorrect [4] = "Awful... just awful";
+        
+        strIncorrect [5] = "*Yawnn* you being wrong is getting old";
+        
+        Random randomIncorrectResponse = new Random ();
+        incorrectResponse = strIncorrect[randomIncorrectResponse.nextInt(strIncorrect.length)];
+        System.out.println (strIncorrect);
     }
 }
 
