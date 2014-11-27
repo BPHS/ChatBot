@@ -103,8 +103,11 @@ import java.util.Random;
     // TODO: make this a cool message too...
     //       this should have many different fun messages that 
     //       denote the user was incorrect to make this fun
+    
+    // Didnt edit because we are doing seperate docs for answers and Questions
     public void showMessageInCorrect() {
-        System.out.println("You are stupid!! Go back to school... Loser!");
+        
+        
     }
 }
 
