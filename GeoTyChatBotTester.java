@@ -42,9 +42,10 @@ public class GeoTyChatBotTester {
             triviaBot.setCategory(category);
             triviaBot.setMovieLineIndex();
             triviaBot.setMovieAnswer();
-            triviaBot.setHistoryAnswer();
             triviaBot.setHistoryLineIndex();
-            
+            triviaBot.setHistoryAnswer();
+            triviaBot.setMathLineIndex();
+            triviaBot.setMathAnswer();
             System.out.print(triviaBot.askTriviaQuestion(category)+"\n");
             try {
             	Scanner in = new Scanner(System.in);
