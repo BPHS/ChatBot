@@ -1,7 +1,18 @@
 
-//import java.io.*;
+import java.io.*;
 import java.util.Scanner;
 import java.util.Random;
+import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
 
 
 /** 
@@ -64,7 +75,98 @@ import java.util.Random;
     public String askTriviaQuestion(int category){
         String question = "";
         if (category == MOVIES) {
-                    question = "Who was the lead actor in Rocky 4?";
+            //File file=new File()
+            //FileReader fr=new FileReader("TriviaBotMovieQuestions.txt");
+            //try{
+              //  BufferedReader reader = new BufferedReader(new FileReader("TriviaBotMovieQuestions.txt"));
+            //}
+            //catch(FileNotFoundException e){
+              //  System.out.println(e.getMessage());
+            //}
+            /*BufferedReader reader = new BufferedReader(new FileReader("TriviaBotMovieQuestions.txt"));
+            try{
+                
+                ArrayList<String> lines = new ArrayList<String>();
+
+                String line = reader.readLine();
+
+                while( line != null ) {
+                    lines.add(line);
+                    line = reader.readLine();
+                }
+
+                // Choose a random one from the list
+                Random r = new Random();
+                String randomString = lines.get(r.nextInt(lines.size()));
+            }
+            catch(FileNotFoundException e){
+                System.out.println(e.toString());
+            }
+            catch(IOException e){
+                
+            }
+            
+            ArrayList<String> sentences = new ArrayList<String>();
+            String temp;
+            int numLines=0;
+            JFileChooser chooser = new JFileChooser();
+
+            File infile = null;
+
+            FileReader reader = null;
+
+            if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+                infile = chooser.getSelectedFile();
+                try{
+                    reader = new FileReader(infile);
+                }
+                catch(FileNotFoundException e){
+                    System.out.println(e.toString());
+                }
+            }
+            try{
+                Scanner input = new Scanner(infile);
+                while (input.hasNextLine()){
+                temp = input.nextLine();
+                sentences.add(temp);
+                numLines++;
+            }
+            }
+            catch(FileNotFoundException e){
+                System.out.println(e.toString());
+            }
+            Random r = new Random();
+            System.out.println(sentences.get(r.nextInt(sentences.size())));
+            */
+            File file=new File("TriviaBotMovieQuestions.txt");
+            ArrayList<String> movieQuestions=new ArrayList<String>(); 
+            try{
+                Scanner scanner=new Scanner(file);
+                while(scanner.hasNextLine()){
+                    String line=scanner.nextLine();
+                    movieQuestions.add(line);
+                }
+            }
+            catch(FileNotFoundException e){
+                System.out.println(e.toString());
+            }
+            Random random=new Random();
+            int randomLine=random.nextInt(movieQuestions.size());
+            question=movieQuestions.get(randomLine);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
         } else if (category == MATH) {
             
