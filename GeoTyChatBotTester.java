@@ -20,7 +20,6 @@ public class GeoTyChatBotTester {
 		
 		GeoTyChatBot triviaBot = new GeoTyChatBot ();
 		Scanner scanner = new Scanner (System.in);
-		triviaBot.setMovieLineIndex();
 		
 		String runProgram = triviaBot.getIntro();
 		
@@ -40,8 +39,13 @@ public class GeoTyChatBotTester {
         	catch (Exception e) {
         		System.out.println(e.toString());
         	}
+            triviaBot.setCategory(category);
+            triviaBot.setMovieLineIndex();
+            triviaBot.setMovieAnswer();
+            triviaBot.setHistoryAnswer();
+            triviaBot.setHistoryLineIndex();
             
-            System.out.print(triviaBot.askTriviaQuestion(category));
+            System.out.print(triviaBot.askTriviaQuestion(category)+"\n");
             try {
             	Scanner in = new Scanner(System.in);
             	answer = in.nextLine();
@@ -60,9 +64,10 @@ public class GeoTyChatBotTester {
             	triviaBot.showMessageInCorrect();
             }
             
-            System.out.println();
+            System.out.println(BAR);
             System.out.print("So far I have asked you " + questionsAsked + " questions.");
             System.out.println(" You have answered " + totalCorrect + " questions correctly!");
+            System.out.println(BAR);
             System.out.println();
            
             runProgram = triviaBot.runAgain();
