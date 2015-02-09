@@ -2,18 +2,7 @@
 import java.io.*;
 import java.util.Scanner;
 import java.util.Random;
-import javax.swing.JOptionPane;
 import java.util.ArrayList;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-
 
 /** 
  * George and tyler created this simple chat bot,
@@ -35,16 +24,59 @@ import javax.swing.JFrame;
     Scanner scanner=new Scanner(System.in);
     private String answer;
     private String response;
-    private String category;
+    //private String category;
     private String triviaQuestion;
+    private int category;
     private final int MOVIES = 1;
     private final int MATH = 2;
     private final int HISTORY = 3;
     public boolean isCorrect;
+    public String correctAnswer;
+    public String correctHistoryAnswer;
     int randomMovieLine;
+    int randomHistoryLine;
     
     File file=new File("TriviaBotMovieQuestions.txt");
     ArrayList<String> movieQuestions=new ArrayList<String>();
+    
+    File answersFile=new File("TriviaBotMovieAnswers.txt");
+    ArrayList<String> movieAnswers=new ArrayList<String>();
+    
+    File historyFile=new File("TriviaBotHistoryQuestion.txt");
+    ArrayList<String> historyQuestions=new ArrayList<String>();
+    
+    File historyAnswersFile=new File("TriviaBotHistoryAnswers.txt");
+    ArrayList<String> historyAnswers=new ArrayList<String>();
+    
+    public void setHistoryLineIndex(){
+        try{
+            Scanner scanner=new Scanner(historyFile);
+            while(scanner.hasNextLine()){
+                String hisLine=scanner.nextLine();
+                historyQuestions.add(hisLine);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e.toString());
+        }
+        Random random=new Random();
+        randomHistoryLine=random.nextInt(historyQuestions.size());
+    }
+    public String setHistoryAnswer(){
+        try{
+            Scanner scanner=new Scanner(historyAnswersFile);
+            while(scanner.hasNextLine()){
+                String hisAnswerLine=scanner.nextLine();
+                historyAnswers.add(hisAnswerLine);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e.toString());
+        }
+        correctHistoryAnswer=historyAnswers.get(randomHistoryLine);
+        return correctHistoryAnswer;
+    }
+    
     
     public void setMovieLineIndex(){
         try{
@@ -60,6 +92,21 @@ import javax.swing.JFrame;
             Random random=new Random();
             randomMovieLine=random.nextInt(movieQuestions.size());
     }
+    public String setMovieAnswer(){
+        try{
+            Scanner scanner=new Scanner(answersFile);
+            while(scanner.hasNextLine()){
+                String line=scanner.nextLine();
+                movieAnswers.add(line);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e.toString());
+        }
+        correctAnswer=movieAnswers.get(randomMovieLine);
+        return correctAnswer;
+    }
+    
  
     
     
@@ -98,138 +145,60 @@ import javax.swing.JFrame;
     public String askTriviaQuestion(int category){
         String question = "";
         if (category == MOVIES) {
-            //File file=new File()
-            //FileReader fr=new FileReader("TriviaBotMovieQuestions.txt");
-            //try{
-              //  BufferedReader reader = new BufferedReader(new FileReader("TriviaBotMovieQuestions.txt"));
-            //}
-            //catch(FileNotFoundException e){
-              //  System.out.println(e.getMessage());
-            //}
-            /*BufferedReader reader = new BufferedReader(new FileReader("TriviaBotMovieQuestions.txt"));
-            try{
-                
-                ArrayList<String> lines = new ArrayList<String>();
-
-                String line = reader.readLine();
-
-                while( line != null ) {
-                    lines.add(line);
-                    line = reader.readLine();
-                }
-
-                // Choose a random one from the list
-                Random r = new Random();
-                String randomString = lines.get(r.nextInt(lines.size()));
-            }
-            catch(FileNotFoundException e){
-                System.out.println(e.toString());
-            }
-            catch(IOException e){
-                
-            }
-            
-            ArrayList<String> sentences = new ArrayList<String>();
-            String temp;
-            int numLines=0;
-            JFileChooser chooser = new JFileChooser();
-
-            File infile = null;
-
-            FileReader reader = null;
-
-            if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
-                infile = chooser.getSelectedFile();
-                try{
-                    reader = new FileReader(infile);
-                }
-                catch(FileNotFoundException e){
-                    System.out.println(e.toString());
-                }
-            }
-            try{
-                Scanner input = new Scanner(infile);
-                while (input.hasNextLine()){
-                temp = input.nextLine();
-                sentences.add(temp);
-                numLines++;
-            }
-            }
-            catch(FileNotFoundException e){
-                System.out.println(e.toString());
-            }
-            Random r = new Random();
-            System.out.println(sentences.get(r.nextInt(sentences.size())));
-            
-            try{
-                Scanner scanner=new Scanner(file);
-                while(scanner.hasNextLine()){
-                    String line=scanner.nextLine();
-                    movieQuestions.add(line);
-                }
-            }
-            catch(FileNotFoundException e){
-                System.out.println(e.toString());
-            }
-            */
             question=movieQuestions.get(randomMovieLine);
         } else if (category == MATH) {
             
             question = "What is 2 + 2 * 3 / 2 = ";
             
-        } else if (category == HISTORY) {
+        } //else if (category == HISTORY) {
             
-            question = "Who was the first name of the first president of the United States: ";
+            //question=historyQuestions.get(randomHistoryLine);
             
-        }
+        //}
         else {
             question = "Sorry I do not support that category yet. Pick another one :)";
         }
 
         return question;
     }
+    
+    public void setCategory(int category){
+        this.category=category;
+    }
+    public int getCategory(){
+        return category;
+    }
 
 
     // TODO: needs to be built, this is a stub only to simulate game play.
     public boolean isCorrect(String answer) {
-        
-        if (category=="1") {
-            File answersFile=new File("TriviaBotMovieAnswers.txt");
-            ArrayList<String> movieAnswers=new ArrayList<String>(); 
-            try{
-                Scanner scanner=new Scanner(answersFile);
-                while(scanner.hasNextLine()){
-                    String line=scanner.nextLine();
-                    movieAnswers.add(line);
-                }
-            }
-            catch(FileNotFoundException e){
-                System.out.println(e.toString());
-            }
-            String correctAnswer=movieAnswers.get(randomMovieLine);
-            if(correctAnswer==answer){
+        if (category==MOVIES) {
+            if(answer.equalsIgnoreCase(correctAnswer)){
                isCorrect=true;
             }
             else{
                 isCorrect=false;
             }
+        }else if(category==HISTORY){
+            if(answer.equalsIgnoreCase(correctHistoryAnswer)){
+                isCorrect=true;
+            } else{
+                isCorrect=false;
+            }
         }
+        /*else{
+            if(answer.equalsIgnoreCase(correctMathAnswer)){
+                isCorrect=true;
+            }
+            else{
+                isCorrect=false;
+            }
+        }
+        */
+        System.out.println("Your answer: "+answer);
+        System.out.println("Correct answer: "+correctAnswer);
         return isCorrect;
     }
-    
-
-    // TODO: make this a cool message
-    //       this should have many different fun messages that 
-    //       denote the user was correct to make this fun.
-    //EDIT: (GEORGE): Mr. Eipp, I think this will work
-    //      to choose a random message to be displayed when the user
-    //      guesses the right answer. The only problem is that I
-    //      don't know where/how to assign the right answer to each
-    //      problem. I'm assuming it will use alot of indexOf's, but
-    //      still really dumbfounded. 
-    //TODO:  Assign the right answer to the questions in order 
-    //      to test the below methods.
-    //      (george)
     public void showMessageCorrect() {
         String correctResponse;
         String[] strCorrect = new String[6]; //declaring array of six items
