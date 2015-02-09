@@ -48,6 +48,12 @@ import java.util.ArrayList;
     File historyAnswersFile=new File("TriviaBotHistoryAnswers.txt");
     ArrayList<String> historyAnswers=new ArrayList<String>();
     
+    File mathFile=new File("TriviaBotMathQuestions.txt");
+    ArrayList<String> mathQuestions=new ArrayList<String>();
+    
+    File mathAnswersFile=new File("TriviaBotMathAnsers.txt");
+    ArrayList<String> mathAnswers=new ArrayList<String>();
+    
     public void setHistoryLineIndex(){
         try{
             Scanner scanner=new Scanner(historyFile);
@@ -186,7 +192,7 @@ import java.util.ArrayList;
                 isCorrect=false;
             }
         }
-        /*else{
+        else{
             if(answer.equalsIgnoreCase(correctMathAnswer)){
                 isCorrect=true;
             }
@@ -194,7 +200,7 @@ import java.util.ArrayList;
                 isCorrect=false;
             }
         }
-        */
+        
         System.out.println("Your answer: "+answer);
         System.out.println("Correct answer: "+correctAnswer);
         return isCorrect;
