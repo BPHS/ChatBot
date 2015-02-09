@@ -40,6 +40,29 @@ import javax.swing.JFrame;
     private final int MOVIES = 1;
     private final int MATH = 2;
     private final int HISTORY = 3;
+    public boolean isCorrect;
+    int randomMovieLine;
+    
+    File file=new File("TriviaBotMovieQuestions.txt");
+    ArrayList<String> movieQuestions=new ArrayList<String>();
+    
+    public void setMovieLineIndex(){
+        try{
+                Scanner scanner=new Scanner(file);
+                while(scanner.hasNextLine()){
+                    String line=scanner.nextLine();
+                    movieQuestions.add(line);
+                }
+            }
+            catch(FileNotFoundException e){
+                System.out.println(e.toString());
+            }
+            Random random=new Random();
+            randomMovieLine=random.nextInt(movieQuestions.size());
+    }
+ 
+    
+    
      /**
 
       * Get greeting of the bot
@@ -137,9 +160,7 @@ import javax.swing.JFrame;
             }
             Random r = new Random();
             System.out.println(sentences.get(r.nextInt(sentences.size())));
-            */
-            File file=new File("TriviaBotMovieQuestions.txt");
-            ArrayList<String> movieQuestions=new ArrayList<String>(); 
+            
             try{
                 Scanner scanner=new Scanner(file);
                 while(scanner.hasNextLine()){
@@ -150,24 +171,8 @@ import javax.swing.JFrame;
             catch(FileNotFoundException e){
                 System.out.println(e.toString());
             }
-            Random random=new Random();
-            int randomLine=random.nextInt(movieQuestions.size());
-            question=movieQuestions.get(randomLine);
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            */
+            question=movieQuestions.get(randomMovieLine);
         } else if (category == MATH) {
             
             question = "What is 2 + 2 * 3 / 2 = ";
@@ -187,12 +192,29 @@ import javax.swing.JFrame;
 
     // TODO: needs to be built, this is a stub only to simulate game play.
     public boolean isCorrect(String answer) {
-        Random random = new Random();
-        int r = random.nextInt();
-        if (r % 2 == 0)
-            return true;
-        else
-            return false;
+        
+        if (category=="1") {
+            File answersFile=new File("TriviaBotMovieAnswers.txt");
+            ArrayList<String> movieAnswers=new ArrayList<String>(); 
+            try{
+                Scanner scanner=new Scanner(answersFile);
+                while(scanner.hasNextLine()){
+                    String line=scanner.nextLine();
+                    movieAnswers.add(line);
+                }
+            }
+            catch(FileNotFoundException e){
+                System.out.println(e.toString());
+            }
+            String correctAnswer=movieAnswers.get(randomMovieLine);
+            if(correctAnswer==answer){
+               isCorrect=true;
+            }
+            else{
+                isCorrect=false;
+            }
+        }
+        return isCorrect;
     }
     
 
@@ -226,7 +248,7 @@ import javax.swing.JFrame;
  
         Random randomCorrectResponse=new Random();
         correctResponse=strCorrect[randomCorrectResponse.nextInt(strCorrect.length)];
-    System.out.println(strCorrect);
+    System.out.println(correctResponse);
     }
     
     // TODO: make this a cool message too...
@@ -252,7 +274,8 @@ import javax.swing.JFrame;
         
         Random randomIncorrectResponse = new Random ();
         incorrectResponse = strIncorrect[randomIncorrectResponse.nextInt(strIncorrect.length)];
-        System.out.println (strIncorrect);
+        System.out.println (incorrectResponse);
+        
     }
 }
 
