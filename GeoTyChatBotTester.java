@@ -13,12 +13,14 @@ public class GeoTyChatBotTester {
 	 * Create a ChatBot, give it user input, and print its replies.
 	 */
 	public static void main(String[] args) {
+	    
 		
 		int totalCorrect = 0;
 		int questionsAsked = 0;
 		
 		GeoTyChatBot triviaBot = new GeoTyChatBot ();
 		Scanner scanner = new Scanner (System.in);
+		triviaBot.setMovieLineIndex();
 		
 		String runProgram = triviaBot.getIntro();
 		
