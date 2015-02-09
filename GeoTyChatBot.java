@@ -33,6 +33,8 @@ import java.util.ArrayList;
     public boolean isCorrect;
     public String correctAnswer;
     public String correctHistoryAnswer;
+    public String correctMathAnswer;
+    int randomMathLine;
     int randomMovieLine;
     int randomHistoryLine;
     
@@ -51,9 +53,40 @@ import java.util.ArrayList;
     File mathFile=new File("TriviaBotMathQuestions.txt");
     ArrayList<String> mathQuestions=new ArrayList<String>();
     
-    File mathAnswersFile=new File("TriviaBotMathAnsers.txt");
+    File mathAnswersFile=new File("TriviaBotMathAnswers.txt");
     ArrayList<String> mathAnswers=new ArrayList<String>();
     
+    public void setMathLineIndex(){
+        try{
+            Scanner scanner=new Scanner(mathFile);
+            while(scanner.hasNextLine()){
+                String mathLine=scanner.nextLine();
+                mathQuestions.add(mathLine);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e.toString());
+        }
+        Random random=new Random();
+        randomMathLine=random.nextInt(mathQuestions.size());
+    }
+    
+    public String setMathAnswer(){
+        try{
+            Scanner scanner=new Scanner(mathAnswersFile);
+            while(scanner.hasNextLine()){
+                String mathAnswersLine=scanner.nextLine();
+                mathAnswers.add(mathAnswersLine);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e.toString());
+        }
+        correctMathAnswer=mathAnswers.get(randomMathLine);
+        return correctMathAnswer;
+    }
+
+
     public void setHistoryLineIndex(){
         try{
             Scanner scanner=new Scanner(historyFile);
@@ -153,14 +186,10 @@ import java.util.ArrayList;
         if (category == MOVIES) {
             question=movieQuestions.get(randomMovieLine);
         } else if (category == MATH) {
-            
-            question = "What is 2 + 2 * 3 / 2 = ";
-            
-        } //else if (category == HISTORY) {
-            
-            //question=historyQuestions.get(randomHistoryLine);
-            
-        //}
+            question=mathQuestions.get(randomMathLine);
+        } else if (category == HISTORY) {
+            question=historyQuestions.get(randomHistoryLine);
+        }
         else {
             question = "Sorry I do not support that category yet. Pick another one :)";
         }
@@ -184,12 +213,14 @@ import java.util.ArrayList;
             }
             else{
                 isCorrect=false;
+                System.out.println("Correct answer: "+correctAnswer);
             }
         }else if(category==HISTORY){
             if(answer.equalsIgnoreCase(correctHistoryAnswer)){
                 isCorrect=true;
             } else{
                 isCorrect=false;
+                System.out.println("Correct answer: "+correctHistoryAnswer);
             }
         }
         else{
@@ -198,11 +229,11 @@ import java.util.ArrayList;
             }
             else{
                 isCorrect=false;
+                System.out.println("Correct answer: "+correctMathAnswer);
             }
         }
         
         System.out.println("Your answer: "+answer);
-        System.out.println("Correct answer: "+correctAnswer);
         return isCorrect;
     }
     public void showMessageCorrect() {
