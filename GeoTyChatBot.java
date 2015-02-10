@@ -68,7 +68,7 @@ import java.util.ArrayList;
             System.out.println(e.toString());
         }
         Random random=new Random();
-        randomMathLine=random.nextInt(mathQuestions.size());
+        randomMathLine=random.nextInt(mathQuestions.size()-1);
     }
     
     public String setMathAnswer(){
@@ -99,7 +99,7 @@ import java.util.ArrayList;
             System.out.println(e.toString());
         }
         Random random=new Random();
-        randomHistoryLine=random.nextInt(historyQuestions.size());
+        randomHistoryLine=random.nextInt(historyQuestions.size()-1);
     }
     public String setHistoryAnswer(){
         try{
@@ -129,7 +129,7 @@ import java.util.ArrayList;
                 System.out.println(e.toString());
             }
             Random random=new Random();
-            randomMovieLine=random.nextInt(movieQuestions.size());
+            randomMovieLine=random.nextInt(movieQuestions.size()-1);
     }
     public String setMovieAnswer(){
         try{
