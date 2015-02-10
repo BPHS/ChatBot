@@ -238,54 +238,50 @@ import java.util.ArrayList;
     }
     public void showMessageCorrect() {
         String correctResponse;
-        String[] strCorrect = new String[6]; //declaring array of six items
+        String[] strCorrect = new String[21]; //declaring array of twenty items
  
               strCorrect[0] ="You are amazing, this a correct!!";
- 
-              strCorrect[1] ="No way, you got it right!";
- 
+              strCorrect[1] ="No way, you got it right";
               strCorrect[2] ="Alright, that was an easy one, next one will be harder!";
-              
               strCorrect[3] ="I can't believe you got that!";
-              
               strCorrect[4] ="How'd you know??";
-              
               strCorrect[5] ="Correct!!";
+              strCorrect[6] ="Wow! How'd you get that one??";
+              strCorrect[7] ="Alright, quit cheating..";
+              strCorrect[8] ="Watch out, valedictorian over here!";
+              strCorrect[9] ="What, do you think you're smart or something?";
+              strCorrect[10] ="Big deal, you got one right...";
+              strCorrect[11] ="Ok, Ok, that question was too easy...";
+              strCorrect[12] ="Even a blind squirrel finds a nut once in a while...";
+              strCorrect[13] ="That's right!!";
+              strCorrect[14] ="You're getting pretty good at this!";
+              strCorrect[15] ="You're lucky I'm taking it easy on you...";
+              strCorrect[16] ="Ok, no more Mr. Nice TriviaBot!!";
+              strCorrect[17] ="You'll never get the next one...";
+              strCorrect[18] ="Way to go!";
+              strCorrect[19] ="Big whoop! Want to fight about it?";
+              strCorrect[20] ="Too easy...";
+              
  
         Random randomCorrectResponse=new Random();
         correctResponse=strCorrect[randomCorrectResponse.nextInt(strCorrect.length)];
     System.out.println(correctResponse);
     }
     
-    // TODO: make this a cool message too...
-    //       this should have many different fun messages that 
-    //       denote the user was incorrect to make this fun
-    
-    // Didnt edit because we are doing seperate docs for answers and Questions
     public void showMessageInCorrect() {
         String incorrectResponse;
         String [] strIncorrect = new String [21];
         
         strIncorrect [0] = "Not even close!";
-        
         strIncorrect [1] = "That wasn't actually your answer was it?";
-        
         strIncorrect [2] = "You should take a break! You seem to be struggling";
-        
         strIncorrect [3] = "We should start betting! I'd be rich!!!";
-        
         strIncorrect [4] = "Awful... just awful";
-        
         strIncorrect [5] = "*Yawnn* you being wrong is getting old";
-        
         strIncorrect [6] = "ERRRR!! WRONG!";
-        
         strIncorrect [7] = "HA! Not even close";
-        
         strIncorrect [8] = "Wow, you must be pretty stupid if you missed that one";
-        
         strIncorrect [9] = "Nope, try again next time";
-        
         strIncorrect [10] = "Am I playing with a 6 year old? I'm sorry, your answers are just bad...";
         strIncorrect [11] = "Nice job!!!... is what I would say if you got that right, but you didn't!";
         strIncorrect [12] = "That's so far off its funny!";
