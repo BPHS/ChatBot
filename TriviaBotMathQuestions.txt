@@ -2,3 +2,5 @@ What is 5+5?
 What is 6*3?
 What is 100/10?
 What is the square root of 64?
+What is the square root of 144?
+Solve : (8)^2 + (10)^2 * (0)^2
