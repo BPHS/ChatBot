@@ -264,7 +264,7 @@ import java.util.ArrayList;
     // Didnt edit because we are doing seperate docs for answers and Questions
     public void showMessageInCorrect() {
         String incorrectResponse;
-        String [] strIncorrect = new String [6];
+        String [] strIncorrect = new String [21];
         
         strIncorrect [0] = "Not even close!";
         
@@ -277,6 +277,26 @@ import java.util.ArrayList;
         strIncorrect [4] = "Awful... just awful";
         
         strIncorrect [5] = "*Yawnn* you being wrong is getting old";
+        
+        strIncorrect [6] = "ERRRR!! WRONG!";
+        
+        strIncorrect [7] = "HA! Not even close";
+        
+        strIncorrect [8] = "Wow, you must be pretty stupid if you missed that one";
+        
+        strIncorrect [9] = "Nope, try again next time";
+        
+        strIncorrect [10] = "Am I playing with a 6 year old? I'm sorry, your answers are just bad...";
+        strIncorrect [11] = "Nice job!!!... is what I would say if you got that right, but you didn't!";
+        strIncorrect [12] = "That's so far off its funny!";
+        strIncorrect [13] = "Are you trying to get these wrong??";
+        strIncorrect [14] = "You're joking, right?";
+        strIncorrect [15] = "No way!!! You got it wrong? Who would of guessed...";
+        strIncorrect [16] = "Don't worry, you'll get the next one, hopefully...";
+        strIncorrect [17] = "The magic 8 ball says: \"Outlook not so good\"";
+        strIncorrect [18] = "Wrong, wrong, wrong..";
+        strIncorrect [19] = "Well, good thing this isn't a test, because you'd fail...";
+        strIncorrect [20] = "When did you go to school? Because you might want to go back...";
         
         Random randomIncorrectResponse = new Random ();
         incorrectResponse = strIncorrect[randomIncorrectResponse.nextInt(strIncorrect.length)];
