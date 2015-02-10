@@ -264,7 +264,7 @@ import java.util.ArrayList;
     // Didnt edit because we are doing seperate docs for answers and Questions
     public void showMessageInCorrect() {
         String incorrectResponse;
-        String [] strIncorrect = new String [6];
+        String [] strIncorrect = new String [21];
         
         strIncorrect [0] = "Not even close!";
         
