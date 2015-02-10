@@ -4,7 +4,8 @@ import java.io.*;
 /**
  * Class to run geo+tyler chatbot
  * Brought to you by geo and tyler
- * 
+ * with a guiding hand of Billy 
+ * Eipp
  */
 public class GeoTyChatBotTester {
 	
