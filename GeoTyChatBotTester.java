@@ -39,17 +39,6 @@ public class GeoTyChatBotTester {
         	catch (Exception e) {
         		System.out.println(e.toString());
         	}
-
-            
-            if (category == 3) {
-                Category history = new Category ("TriviaBotHistoryQuestion.txt", "TriviaBotHistoryAnswers.txt");
-                
-            }
-            
-            
-            
-            System.out.print(triviaBot.askTriviaQuestion(category));
-
             triviaBot.setCategory(category);
             triviaBot.setMovieLineIndex();
             triviaBot.setMovieAnswer();
