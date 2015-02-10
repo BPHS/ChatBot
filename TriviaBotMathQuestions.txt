@@ -1,0 +1,4 @@
+0. What is 5+5?
+1. What is 6*3?
+2. What is 100/10?
+3. What is the square root of 64?

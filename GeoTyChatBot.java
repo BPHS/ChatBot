@@ -1,8 +1,8 @@
 
-//import java.io.*;
+import java.io.*;
 import java.util.Scanner;
 import java.util.Random;
-
+import java.util.ArrayList;
 
 /** 
  * George and tyler created this simple chat bot,
@@ -24,11 +24,131 @@ import java.util.Random;
     Scanner scanner=new Scanner(System.in);
     private String answer;
     private String response;
-    private String category;
+    //private String category;
     private String triviaQuestion;
+    private int category;
     private final int MOVIES = 1;
     private final int MATH = 2;
     private final int HISTORY = 3;
+    public boolean isCorrect;
+    public String correctAnswer;
+    public String correctHistoryAnswer;
+    public String correctMathAnswer;
+    int randomMathLine;
+    int randomMovieLine;
+    int randomHistoryLine;
+    
+    File file=new File("TriviaBotMovieQuestions.txt");
+    ArrayList<String> movieQuestions=new ArrayList<String>();
+    
+    File answersFile=new File("TriviaBotMovieAnswers.txt");
+    ArrayList<String> movieAnswers=new ArrayList<String>();
+    
+    File historyFile=new File("TriviaBotHistoryQuestion.txt");
+    ArrayList<String> historyQuestions=new ArrayList<String>();
+    
+    File historyAnswersFile=new File("TriviaBotHistoryAnswers.txt");
+    ArrayList<String> historyAnswers=new ArrayList<String>();
+    
+    File mathFile=new File("TriviaBotMathQuestions.txt");
+    ArrayList<String> mathQuestions=new ArrayList<String>();
+    
+    File mathAnswersFile=new File("TriviaBotMathAnswers.txt");
+    ArrayList<String> mathAnswers=new ArrayList<String>();
+    
+    public void setMathLineIndex(){
+        try{
+            Scanner scanner=new Scanner(mathFile);
+            while(scanner.hasNextLine()){
+                String mathLine=scanner.nextLine();
+                mathQuestions.add(mathLine);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e.toString());
+        }
+        Random random=new Random();
+        randomMathLine=random.nextInt(mathQuestions.size()-1);
+    }
+    
+    public String setMathAnswer(){
+        try{
+            Scanner scanner=new Scanner(mathAnswersFile);
+            while(scanner.hasNextLine()){
+                String mathAnswersLine=scanner.nextLine();
+                mathAnswers.add(mathAnswersLine);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e.toString());
+        }
+        correctMathAnswer=mathAnswers.get(randomMathLine);
+        return correctMathAnswer;
+    }
+
+
+    public void setHistoryLineIndex(){
+        try{
+            Scanner scanner=new Scanner(historyFile);
+            while(scanner.hasNextLine()){
+                String hisLine=scanner.nextLine();
+                historyQuestions.add(hisLine);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e.toString());
+        }
+        Random random=new Random();
+        randomHistoryLine=random.nextInt(historyQuestions.size()-1);
+    }
+    public String setHistoryAnswer(){
+        try{
+            Scanner scanner=new Scanner(historyAnswersFile);
+            while(scanner.hasNextLine()){
+                String hisAnswerLine=scanner.nextLine();
+                historyAnswers.add(hisAnswerLine);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e.toString());
+        }
+        correctHistoryAnswer=historyAnswers.get(randomHistoryLine);
+        return correctHistoryAnswer;
+    }
+    
+    
+    public void setMovieLineIndex(){
+        try{
+                Scanner scanner=new Scanner(file);
+                while(scanner.hasNextLine()){
+                    String line=scanner.nextLine();
+                    movieQuestions.add(line);
+                }
+            }
+            catch(FileNotFoundException e){
+                System.out.println(e.toString());
+            }
+            Random random=new Random();
+            randomMovieLine=random.nextInt(movieQuestions.size()-1);
+    }
+    public String setMovieAnswer(){
+        try{
+            Scanner scanner=new Scanner(answersFile);
+            while(scanner.hasNextLine()){
+                String line=scanner.nextLine();
+                movieAnswers.add(line);
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e.toString());
+        }
+        correctAnswer=movieAnswers.get(randomMovieLine);
+        return correctAnswer;
+    }
+    
+ 
+    
+    
      /**
 
       * Get greeting of the bot
@@ -64,16 +184,11 @@ import java.util.Random;
     public String askTriviaQuestion(int category){
         String question = "";
         if (category == MOVIES) {
-                    question = "Who was the lead actor in Rocky 4?";
-            
+            question=movieQuestions.get(randomMovieLine);
         } else if (category == MATH) {
-            
-            question = "What is 2 + 2 * 3 / 2 = ";
-            
+            question=mathQuestions.get(randomMathLine);
         } else if (category == HISTORY) {
-            
-            question = "Who was the first name of the first president of the United States: ";
-            
+            question=historyQuestions.get(randomHistoryLine);
         }
         else {
             question = "Sorry I do not support that category yet. Pick another one :)";
@@ -81,31 +196,46 @@ import java.util.Random;
 
         return question;
     }
+    
+    public void setCategory(int category){
+        this.category=category;
+    }
+    public int getCategory(){
+        return category;
+    }
 
 
     // TODO: needs to be built, this is a stub only to simulate game play.
     public boolean isCorrect(String answer) {
-        Random random = new Random();
-        int r = random.nextInt();
-        if (r % 2 == 0)
-            return true;
-        else
-            return false;
+        if (category==MOVIES) {
+            if(answer.equalsIgnoreCase(correctAnswer)){
+               isCorrect=true;
+            }
+            else{
+                isCorrect=false;
+                System.out.println("Correct answer: "+correctAnswer);
+            }
+        }else if(category==HISTORY){
+            if(answer.equalsIgnoreCase(correctHistoryAnswer)){
+                isCorrect=true;
+            } else{
+                isCorrect=false;
+                System.out.println("Correct answer: "+correctHistoryAnswer);
+            }
+        }
+        else{
+            if(answer.equalsIgnoreCase(correctMathAnswer)){
+                isCorrect=true;
+            }
+            else{
+                isCorrect=false;
+                System.out.println("Correct answer: "+correctMathAnswer);
+            }
+        }
+        
+        System.out.println("Your answer: "+answer);
+        return isCorrect;
     }
-    
-
-    // TODO: make this a cool message
-    //       this should have many different fun messages that 
-    //       denote the user was correct to make this fun.
-    //EDIT: (GEORGE): Mr. Eipp, I think this will work
-    //      to choose a random message to be displayed when the user
-    //      guesses the right answer. The only problem is that I
-    //      don't know where/how to assign the right answer to each
-    //      problem. I'm assuming it will use alot of indexOf's, but
-    //      still really dumbfounded. 
-    //TODO:  Assign the right answer to the questions in order 
-    //      to test the below methods.
-    //      (george)
     public void showMessageCorrect() {
         String correctResponse;
         String[] strCorrect = new String[6]; //declaring array of six items
@@ -124,7 +254,7 @@ import java.util.Random;
  
         Random randomCorrectResponse=new Random();
         correctResponse=strCorrect[randomCorrectResponse.nextInt(strCorrect.length)];
-    System.out.println(strCorrect);
+    System.out.println(correctResponse);
     }
     
     // TODO: make this a cool message too...
@@ -150,7 +280,8 @@ import java.util.Random;
         
         Random randomIncorrectResponse = new Random ();
         incorrectResponse = strIncorrect[randomIncorrectResponse.nextInt(strIncorrect.length)];
-        System.out.println (strIncorrect);
+        System.out.println (incorrectResponse);
+        
     }
 }
 

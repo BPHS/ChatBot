@@ -1,13 +1,13 @@
-0. Julius Caesar
-1. Six or 6
-2. 1492
-3. 1914
-4. 1945
-5. 1939
-6. Hiroshima
-7. Genoa
-8. Mussolini
-9. Catholic
-10. Italian
-11. Big Ben
-12. 1963
+Julius Caesar
+Six or 6
+1492
+1914
+1945
+1939
+Hiroshima
+Genoa
+Mussolini
+Catholic
+Italian
+Big Ben
+1963

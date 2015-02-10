@@ -35,11 +35,19 @@ Im down. It might be a little tricky though
 
 You wanna see a futuristic gun? 
     ____________
+<<<<<<< HEAD
+    |   ______ |
+    |   |
+    |__ |
+
+Its a futuristic gum!
+=======
     |   ______ |-------------------------------      0
     |   |                                            |
     |__ |                                            ^
                                                     /  \
 Its a futuristic gun!
+>>>>>>> f746045add63d7b0073d32b1f7e781f6af501d0f
 
 Tyler and claudio smell
 

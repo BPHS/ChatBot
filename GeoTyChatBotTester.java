@@ -13,6 +13,7 @@ public class GeoTyChatBotTester {
 	 * Create a ChatBot, give it user input, and print its replies.
 	 */
 	public static void main(String[] args) {
+	    
 		
 		int totalCorrect = 0;
 		int questionsAsked = 0;
@@ -38,6 +39,7 @@ public class GeoTyChatBotTester {
         	catch (Exception e) {
         		System.out.println(e.toString());
         	}
+
             
             if (category == 3) {
                 Category history = new Category ("TriviaBotHistoryQuestion.txt", "TriviaBotHistoryAnswers.txt");
@@ -47,6 +49,16 @@ public class GeoTyChatBotTester {
             
             
             System.out.print(triviaBot.askTriviaQuestion(category));
+
+            triviaBot.setCategory(category);
+            triviaBot.setMovieLineIndex();
+            triviaBot.setMovieAnswer();
+            triviaBot.setHistoryLineIndex();
+            triviaBot.setHistoryAnswer();
+            triviaBot.setMathLineIndex();
+            triviaBot.setMathAnswer();
+            System.out.print(triviaBot.askTriviaQuestion(category)+"\n");
+
             try {
             	Scanner in = new Scanner(System.in);
             	answer = in.nextLine();
@@ -65,9 +77,10 @@ public class GeoTyChatBotTester {
             	triviaBot.showMessageInCorrect();
             }
             
-            System.out.println();
+            System.out.println(BAR);
             System.out.print("So far I have asked you " + questionsAsked + " questions.");
             System.out.println(" You have answered " + totalCorrect + " questions correctly!");
+            System.out.println(BAR);
             System.out.println();
            
             runProgram = triviaBot.runAgain();
