@@ -1,8 +1,8 @@
 Who said the quote "Veni Vidi Vici"?
 How many wives did Henry the eighth have?
 What year did Christopher Columbus go to America?
-When did WWI start?
-When did WWII end?
+When did WWI start (date)?
+When did WWII end (date)?
 What year did the Spanish War end?
 Where did the first atomic bomb explode for the first time in Japan?
 Where was Christopher Columbus born?
@@ -24,3 +24,18 @@ What good was dumped into the harbor during The Boston Tea Party?
 Who wrote the National Anthem of America?
 Who gifted the Statue of Liberty to the United States?
 What were Japenese pilots called who purposely crashed their planes into other objects?
+What space shuttle exploded on take off, on January 28, 1986?
+What is the national bird of America?
+What is a person called who is running for office, while they are already in office?
+The right to bear arms is found in what amendment?
+What is the 50th state to join the United States of America?
+What was the first state in the United States of America?
+What is the capital of France?
+What is the capital of England?
+What is the capital of Alaska?
+What is the longest river in the world?
+What is the tallest mountain in the world?
+What is the national animal of Australia?
+What is the national animal of Canada?
+What country was the center of a nuclear crisis in the 60's?
+What leader was responsible for the Cuban Missile Crisis? (Full name)
